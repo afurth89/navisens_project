@@ -16,7 +16,12 @@ router.route('/')
 router.route('/:id')
   .get((req, res) => {
     console.log("Device Id to find is: ", req.params.id)
-    // db.Data.
+    db.Data.find({'deviceId': req.params.id})
+      .exec((err, deviceData) => {
+        if (err) throw err;
+        console.log("Device data: ", deviceData)
+        res.send(deviceData)
+      })
   })
 
 module.exports = router;

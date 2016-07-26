@@ -20,7 +20,7 @@
           controller: 'ShowController',
           controllerAs: 'vm',
           resolve: {
-            data: getDataById
+            deviceData: getDataById
           }
         })
         .otherwise({redirectTo: '/'})
