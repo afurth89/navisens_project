@@ -12,5 +12,9 @@
       this.getAllData = () => {
         return $http.get(data_BASE_URL)
       }
+
+      this.getDeviceById = (id) => {
+        return $http.get(data_BASE_URL + id)
+      }
     }
 })();

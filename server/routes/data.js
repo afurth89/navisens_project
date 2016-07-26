@@ -13,4 +13,10 @@ router.route('/')
       }) 
   })
 
+router.route('/:id')
+  .get((req, res) => {
+    console.log("Device Id to find is: ", req.params.id)
+    // db.Data.
+  })
+
 module.exports = router;

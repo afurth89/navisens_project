@@ -15,6 +15,14 @@
             data: getAllData
           }
         })
+        .when('/:id', {
+          templateUrl: '../views/show.html',
+          controller: 'ShowController',
+          controllerAs: 'vm',
+          resolve: {
+            data: getDataById
+          }
+        })
         .otherwise({redirectTo: '/'})
       $locationProvider.html5Mode(true);
     }
@@ -23,6 +31,12 @@
 
     function getAllData(DataService) {
       return DataService.getAllData();
+    }
+
+    getDataById.$inject = ['DataService', '$route']
+
+    function getDataById(DataService, $route) {
+      return DataService.getDeviceById($route.current.params.id);
     }
 
 })();

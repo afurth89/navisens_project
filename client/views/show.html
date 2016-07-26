@@ -1,4 +1,4 @@
-<h1>[DATA DISPLAY]</h1>
+<h1>[DATA DISPLAY - For Device]</h1>
 <table class="table table-condensed">
   <thead>
     <tr>
@@ -12,7 +12,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="datapoint in vm.data">
-      <td><a href="/{{datapoint.deviceId}}">{{datapoint.deviceId}}</a></td>
+      <td>{{datapoint.deviceId}}</td>
       <td>{{datapoint.platform}}</td>
       <td>{{datapoint.timestamp}}</td>
       <td>{{datapoint.motion}}</td>
