@@ -1,2 +1,23 @@
 <h1>[DATA DISPLAY]</h1>
-<p>{{vm.data}}</p>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <td>Device Id</td>
+      <td>Platform</td>
+      <td>Time</td>
+      <td>Motion Type</td>
+      <td>Latitude</td>
+      <td>Longitude</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="datapoint in vm.data">
+      <td>{{datapoint.deviceId}}</td>
+      <td>{{datapoint.platform}}</td>
+      <td>{{datapoint.timestamp}}</td>
+      <td>{{datapoint.motion}}</td>
+      <td>{{datapoint.lat}}</td>
+      <td>{{datapoint.long}}</td>
+    </tr>
+  </tbody>
+</table>
